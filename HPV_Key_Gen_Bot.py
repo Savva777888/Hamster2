@@ -22,13 +22,13 @@ HPV = TeleBot(TG_TOKEN, parse_mode='HTML')
 def HPV_Button(Key_Gen=True) -> types.InlineKeyboardMarkup:
     Button = types.InlineKeyboardMarkup()
     if Key_Gen:
-        Button.add(types.InlineKeyboardButton('⭐️ Сгенерировать ключи ⭐️', callback_data='HPV_Key_Gen'))
-    Button.add(types.InlineKeyboardButton('☘️ HPV TEAM', url='https://t.me/HPV_TEAM'), types.InlineKeyboardButton('Владелец 💎', url='https://t.me/A_KTO_Tbl')).add(types.InlineKeyboardButton('🤖 Скрипты для абуза ботов 🤖', url='https://t.me/HPV_TEAM/1120'))
+        Button.add(types.InlineKeyboardButton('😶‍🌫️ Сгенерировать ключи 😶‍🌫️', callback_data='HPV_Key_Gen'))
+    Button.add(types.InlineKeyboardButton('😎 Владелец: САНТИЗ НАХУ', url='https://t.me/santiz52cr'))
 
     return Button
 
 def HPV_Text() -> str:
-    return f'''👋🏻<b> Добро пожаловать в бесплатный генератор ключей для Hamster Kombat!</b>\n\n<blockquote><i>🔑 Данный бот позволяет генерировать по 1 ключу для каждой игры за раз, без каких-либо ограничений или подписок!</i></blockquote>\n\n<blockquote><i><tg-spoiler>⚡️ Также рекомендую подписаться на наш канал! Там вы найдёте много интересного контента в сфере IT, этичного хакинга и абуза криптопроектов!</tg-spoiler></i></blockquote>'''
+    return f'''👋🏻<b> Здарова мираславик и кириешка228</b>\n\n\n<b>МОЙ БОТ СУКА позволяет генерировать по 1 ключу для каждой игры за раз без ограничений нахуй</b>'''
 
 
 
@@ -49,8 +49,8 @@ def HPV_INLINE(info: types.CallbackQuery):
     HPV_Command = info.data # Команда
 
     if HPV_Command == 'HPV_Key_Gen':
-        HPV.answer_callback_query(info.id, '☑️ Секундочку, идёт генерация...')
-        HPV.edit_message_text('☑️ <b>Секундочку, идёт генерация...</b>\n\n<blockquote><i>📌 В среднем генерация ключей занимает несколько минут, пожалуйста, подождите!</i></blockquote>', HPV_User, HPV_Message_ID, reply_markup=HPV_Button(False))
+        HPV.answer_callback_query(info.id, '☑️ ЖДИ СУКА, идёт генерация...')
+        HPV.edit_message_text('☑️ <b>ЖДИ СУКА, идёт генерация...</b>\n\n<blockquote><i>📌 В среднем генерация ключей занимает несколько минут, ЖДИ!</i></blockquote>', HPV_User, HPV_Message_ID, reply_markup=HPV_Button(False))
 
         Console_Lock = Lock()
         Proxy = HPV_Proxy_Checker()
@@ -68,13 +68,13 @@ def HPV_INLINE(info: types.CallbackQuery):
         if HPV_Keys:
             for KEYS in HPV_Keys:
                 for Game, Keys in KEYS.items():
-                    print(Fore.MAGENTA + '\n[HPV]' + Fore.GREEN + f' — Ваши ключи для `{Game}`:\n')
+                    print(Fore.MAGENTA + '\n[SANTIZ ИИИУУУ]' + Fore.GREEN + f' — бери ключ писят два `{Game}`:\n')
                     KEYS_TEXT += f'\n✅ <b>Ваши ключи для <i>{Game}</i>:</b>\n'
                     for Key in Keys:
-                        print(Fore.MAGENTA + '[HPV]' + Fore.GREEN + ' — `' + Fore.WHITE + Key + Fore.GREEN + '` ///' + Fore.MAGENTA + ' t.me/HPV_TEAM')
+                        print(Fore.MAGENTA + '[SANTIZ ИИИУУУ]' + Fore.GREEN + ' — `' + Fore.WHITE + Key + Fore.GREEN + '` ///' + Fore.MAGENTA + ' t.me/santiz52cr')
                         KEYS_TEXT += f'<b>—</b> <code>{Key}</code>\n'
         else:
-            KEYS_TEXT += '\n❌ <b>К сожалению, не удалось сгенерировать ключи. Пожалуйста, повторите попытку позже!</b>'
+            KEYS_TEXT += '\n❌ <b>Не получилось ёпта. повтори позже!</b>'
 
         HPV.edit_message_text(KEYS_TEXT, HPV_User, HPV_Message_ID, reply_markup=HPV_Button())
 ########################################################

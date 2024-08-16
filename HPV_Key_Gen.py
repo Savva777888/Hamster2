@@ -27,11 +27,11 @@ if __name__ == '__main__':
     Retry = 1 if len(Proxy) == 0 else len(Proxy) if len(Proxy) > 0 and len(Proxy) <= 50 else 50
 
     try:
-        Amount = int(input(Fore.MAGENTA + '\n[HPV]' + Fore.GREEN + f' - Введите желаемое количество ключей (не более {Retry}): '))
+        Amount = int(input(Fore.MAGENTA + '\n[SANTIZ ИИИУУУ]' + Fore.GREEN + f' - Введи количество ключей писят два (не более {Retry}): '))
         KEY_COUNT = Amount if Amount <= Retry else Retry
         print('\n')
     except:
-        print(Fore.MAGENTA + '[HPV]' + Fore.GREEN + ' — Введено некорректное занчение!')
+        print(Fore.MAGENTA + '[SANTIZ ИИИУУУ]' + Fore.GREEN + ' — Введено некорректное занчение!')
         exit()
 
     Games = [_HPV_My_Clone_Army, _HPV_Chain_Cube_2048, _HPV_Train_Miner, _HPV_Bike_Ride_3D]
@@ -44,15 +44,15 @@ if __name__ == '__main__':
             HPV_Keys.append(Keys) if Status else None
 
     if HPV_Keys:
-        with open('[HPV] Keys.txt', 'w', encoding='utf-8') as HPV_TEAM:
+        with open('[SANTIZ ИИИУУУ] Keys.txt', 'w', encoding='utf-8') as HPV_TEAM:
             for KEYS in HPV_Keys:
                 for Game, Keys in KEYS.items():
-                    print(Fore.MAGENTA + '\n[HPV]' + Fore.GREEN + f' — Ваши ключи для `{Game}`:')
-                    HPV_TEAM.write(f'\n[HPV]  — Ваши ключи для {Game}:\n')
+                    print(Fore.MAGENTA + '\n[SANTIZ ИИИУУУ]' + Fore.GREEN + f' — бери ключ писят два `{Game}`:')
+                    HPV_TEAM.write(f'\n[SANTIZ ИИИУУУ]  — Ваши ключи для {Game}:\n')
                     for Key in Keys:
-                        print(Fore.MAGENTA + '[HPV]' + Fore.GREEN + ' — `' + Fore.WHITE + Key + Fore.GREEN + '` ///' + Fore.MAGENTA + ' t.me/HPV_TEAM')
-                        HPV_TEAM.write(f'   `{Key}` /// @HPV_TEAM\n')
+                        print(Fore.MAGENTA + '[SANTIZ ИИИУУУ]' + Fore.GREEN + ' — `' + Fore.WHITE + Key + Fore.GREEN + '` ///' + Fore.MAGENTA + ' t.me/santiz52cr')
+                        HPV_TEAM.write(f'   `{Key}` /// @santiz52cr\n')
     else:
-        print(Fore.MAGENTA + '\n[HPV]' + Fore.RED + ' К сожалению, не удалось сгенерировать ключи. Пожалуйста, повторите попытку позже!')
+        print(Fore.MAGENTA + '\n[SANTIZ ИИИУУУ]' + Fore.RED + ' НЕ ПОЛУЧИЛОСЬ, ДУРАК БЛИН')
 
 
