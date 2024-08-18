@@ -14,9 +14,9 @@ from itertools import cycle
 
 
 
-class HPV_Train_Miner:
+class HPV_Twerk_Race:
     '''
-    Генерация ключей для игры Train Miner в Hamster Kombat
+    Генерация ключей для игры Twerk Race в Hamster Kombat
     ------------------------------------------------------
     [1] - `Генерация уникального ID`
     
@@ -30,8 +30,8 @@ class HPV_Train_Miner:
 
 
     def __init__(self, Console_Lock: Lock, _Thread: int, Proxy: dict = None) -> None:
-        self.APP_TOKEN = '82647f43-3f87-402d-88dd-09a90025313f'
-        self.PROMO_ID = 'c4480ac7-e178-4973-8061-9ed5b2e17954'
+        self.APP_TOKEN = '61308365-9d16-4040-8bb0-2f4a4c69074c'
+        self.PROMO_ID = '61308365-9d16-4040-8bb0-2f4a4c69074c'
         self.Console_Lock = Console_Lock
 
         self.THREAD = f'Поток #{_Thread}' # Нумерация потока
@@ -143,14 +143,14 @@ class HPV_Train_Miner:
 
 
 
-def _HPV_Train_Miner(Console_Lock, Retry, Proxy) -> dict:
-    '''Генерация ключей для игры Train Miner'''
+def _HPV_Twerk_Race(Console_Lock, Retry, Proxy) -> dict:
+    '''Генерация ключей для игры Twerk Race'''
 
-    HPV_Keys = [] # Список хранящий ключи для Train Miner
+    HPV_Keys = [] # Список хранящий ключи для Twerk Race
     Threads = [] # Список потоков
 
     def HPV_Key_Gen(_Thread, Proxy=None):
-        HPV = HPV_Train_Miner(Console_Lock, f'{_Thread} Train', Proxy)
+        HPV = HPV_Twerk_Race(Console_Lock, f'{_Thread} Twerk', Proxy)
         KEY = HPV.Run()
         HPV_Keys.append(KEY) if KEY else None
 
@@ -166,4 +166,4 @@ def _HPV_Train_Miner(Console_Lock, Retry, Proxy) -> dict:
     for thread in Threads:
         thread.join()
 
-    return {'Train Miner': HPV_Keys}, True if HPV_Keys else False
+    return {'Twerk Race': HPV_Keys}, True if HPV_Keys else False

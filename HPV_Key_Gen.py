@@ -8,6 +8,8 @@ from Core.Tools.Generation.HPV_My_Clone_Army import _HPV_My_Clone_Army
 from Core.Tools.Generation.HPV_Chain_Cube_2048 import _HPV_Chain_Cube_2048
 from Core.Tools.Generation.HPV_Train_Miner import _HPV_Train_Miner
 from Core.Tools.Generation.HPV_Bike_Ride_3D import _HPV_Bike_Ride_3D
+from Core.Tools.Generation.HPV_Twerk_Race import _HPV_Twerk_Race
+from Core.Tools.Generation.HPV_Merge_Away import _HPV_Merge_Away
 
 from Core.Tools.HPV_Proxy import HPV_Proxy_Checker
 from Core.Tools.HPV_Banner import HPV_Banner
@@ -31,10 +33,10 @@ if __name__ == '__main__':
         KEY_COUNT = Amount if Amount <= Retry else Retry
         print('\n')
     except:
-        print(Fore.MAGENTA + '[SANTIZ ИИИУУУ]' + Fore.GREEN + ' — Введено некорректное занчение!')
+        print(Fore.MAGENTA + '[SANTIZ ИИИУУУ]' + Fore.GREEN + ' — Введено некорректное значение!')
         exit()
 
-    Games = [_HPV_My_Clone_Army, _HPV_Chain_Cube_2048, _HPV_Train_Miner, _HPV_Bike_Ride_3D]
+    Games = [_HPV_Twerk_Race, _HPV_Merge_Away, _HPV_My_Clone_Army, _HPV_Chain_Cube_2048, _HPV_Train_Miner, _HPV_Bike_Ride_3D]
 
     HPV_Keys = []
     with ThreadPoolExecutor() as HPV:
@@ -53,6 +55,6 @@ if __name__ == '__main__':
                         print(Fore.MAGENTA + '[SANTIZ ИИИУУУ]' + Fore.GREEN + ' — `' + Fore.WHITE + Key + Fore.GREEN + '` ///' + Fore.MAGENTA + ' t.me/santiz52cr')
                         HPV_TEAM.write(f'   `{Key}` /// @santiz52cr\n')
     else:
-        print(Fore.MAGENTA + '\n[SANTIZ ИИИУУУ]' + Fore.RED + ' НЕ ПОЛУЧИЛОСЬ, ДУРАК БЛИН')
+        print(Fore.MAGENTA + '\n[SANTIZ ИИИУУУ]' + Fore.RED + ' НЕ ПОЛУЧИЛОСЬ, ДУРАК БЛЕН')
 
 

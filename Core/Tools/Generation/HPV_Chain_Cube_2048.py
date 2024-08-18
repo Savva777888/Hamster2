@@ -125,16 +125,17 @@ class HPV_Chain_Cube_2048:
                     self.Logging('Success', '🟢', 'Ключ готов!')
                     break
                 else:
-                    self.Logging('Warning', '🟡', 'Ключи ещё не готов!')
+                    self.Logging('Warning', '🟥', 'Ключи ещё не готов!')
 
             # Получение токена
             KEY = self.HPV_Generate_Key()
             if self.HPV_Generate_Key():
-                self.Logging('Success', '🟣', 'Ключ успешно получен!')
+                self.Logging('Success', '🟩', 'Ключ успешно получен!')
             return KEY
         else: # Если токен не получен
             self.Logging('Error', '🔴', 'Аутентификация не успешна!')
             return None
+
 
 
 
