@@ -7,6 +7,8 @@ from Core.Tools.Generation.HPV_My_Clone_Army import _HPV_My_Clone_Army
 from Core.Tools.Generation.HPV_Chain_Cube_2048 import _HPV_Chain_Cube_2048
 from Core.Tools.Generation.HPV_Train_Miner import _HPV_Train_Miner
 from Core.Tools.Generation.HPV_Bike_Ride_3D import _HPV_Bike_Ride_3D
+from Core.Tools.Generation.HPV_Twerk_Race import _HPV_Twerk_Race
+from Core.Tools.Generation.HPV_Merge_Away import _HPV_Merge_Away
 
 from Core.Config.HPV_Config import TG_TOKEN
 from Core.Tools.HPV_Proxy import HPV_Proxy_Checker
@@ -56,7 +58,7 @@ def HPV_INLINE(info: types.CallbackQuery):
         Proxy = HPV_Proxy_Checker()
         KEYS_TEXT = HPV_Text() + '\n'
 
-        Games = [_HPV_My_Clone_Army, _HPV_Chain_Cube_2048, _HPV_Train_Miner, _HPV_Bike_Ride_3D]
+        Games = [_HPV_Twerk_Race, _HPV_Merge_Away, _HPV_My_Clone_Army, _HPV_Chain_Cube_2048, _HPV_Train_Miner, _HPV_Bike_Ride_3D]
 
         HPV_Keys = []
         with ThreadPoolExecutor() as _HPV:
